@@ -41,6 +41,17 @@ app.post("/books", async (request, response) => {
   }
 });
 
+// Route for get all books from db
+app.get("/books", async (request, response) => {
+  try {
+    const books = await Book.find({});
+    return response.status(200).json(books);
+  } catch (error) {
+    console.log(error.message);
+    response.status(500).send({ message: error.message });
+  }
+});
+
 mongoose
   .connect(mongoDBURL)
   .then(() => {
