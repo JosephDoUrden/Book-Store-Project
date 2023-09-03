@@ -9,14 +9,13 @@ app.get("/", (request, response) => {
   return response.status(234).send("Welcome to MERN Stack Book Shop");
 });
 
-app.listen(PORT, () => {
-  console.log(`App listening on port ${PORT}!`);
-});
-
 mongoose
   .connect(mongoDBURL)
   .then(() => {
     console.log("App connected to db");
+    app.listen(PORT, () => {
+      console.log(`App listening on port ${PORT}!`);
+    });
   })
   .catch((error) => {
     console.log(error);
