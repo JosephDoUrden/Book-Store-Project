@@ -1,6 +1,13 @@
 # Book-Store-Project
 MERN Stack
 
+- Backend CRUD
+- Backend Router
+- CORS Policy
+- MongoDB operations
+- Frontend CRUD 
+- Frontend Router 
+
 ## Contact
 
 If you have any questions, feedback, or would like to connect, feel free to reach out to me.
